@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,6 +98,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
     }
 
+    private void notifyDataSetChanged() {
+    }
+
     private void openDetailView(int position) {
         Intent intent = new Intent(mContext, ProductDetail.class);
         Product product = mProductList.get(position);
@@ -112,6 +116,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         protected TextView proQuantity;
         protected TextView proPrice;
         protected Button sellButton;
+
 
         public ProductViewHolder(View view) {
             super(view);
