@@ -98,8 +98,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
     }
 
-    private void notifyDataSetChanged() {
-    }
 
     private void openDetailView(int position) {
         Intent intent = new Intent(mContext, ProductDetail.class);
